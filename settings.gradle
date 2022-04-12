@@ -22,3 +22,9 @@ include ':users'
 include ':users:users_domain'
 include ':users:users_data'
 include ':users:users_presentation'
+
+//Post
+include ':post'
+include ':post:post_domain'
+include ':post:post_data'
+include ':post:post_presentation'
