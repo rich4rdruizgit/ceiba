@@ -15,13 +15,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import com.ceiba.core_ui.util.LocalSpacing
-import com.ceiba.users_presentation.list.GetUserUiState
+import com.ceiba.users_presentation.list.UserViewUiState
 
 
 @ExperimentalCoilApi
 @Composable
 fun UserItem(
-    userUiState: GetUserUiState,
+    userUiState: UserViewUiState,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {

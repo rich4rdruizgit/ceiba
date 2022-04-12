@@ -10,9 +10,9 @@ import com.ceiba.core.R
 import com.ceiba.core.utils.UiEvent
 import com.ceiba.core.utils.UiText
 import com.ceiba.users_domain.use_cases.UsersUseCases
-import com.ceiba.users_presentation.list.GetUserState
-import com.ceiba.users_presentation.list.GetUserUiState
+import com.ceiba.users_presentation.list.UserViewState
 import com.ceiba.users_presentation.list.UserEvent
+import com.ceiba.users_presentation.list.UserViewUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -22,7 +22,7 @@ import javax.inject.Inject
 @HiltViewModel
 class GetUsersViewModel @Inject constructor(private val usersUseCases: UsersUseCases) :
     ViewModel() {
-    var state by mutableStateOf(GetUserState())
+    var state by mutableStateOf(UserViewState())
         private set
     private val _uiEvent = Channel<UiEvent>()
     val uiEvent = _uiEvent.receiveAsFlow()
@@ -38,14 +38,17 @@ class GetUsersViewModel @Inject constructor(private val usersUseCases: UsersUseC
     private fun getUsers(){
         viewModelScope.launch {
             state = state.copy(
+                isGetUserService = false,
                 getUsers = emptyList()
             )
             usersUseCases.getUsers()
                 .onSuccess {
                     users ->
                     state = state.copy(getUsers = users.map{
-                        GetUserUiState(it)
-                    })
+                        UserViewUiState(it)
+                    },
+                    isGetUserService = true
+                    )
                 }
                 .onFailure {
                     state = state.copy(getUsers = emptyList())
