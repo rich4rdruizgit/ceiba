@@ -3,6 +3,16 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle.kts">
           <value>
             <set />
@@ -29,6 +39,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/ceiba/ceibatest/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ceiba/ceibatest/navigation/Route.kt">
           <value>
             <set />
           </value>
@@ -63,12 +78,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/core-ui/src/main/java/com/ceiba/core_ui/util/Dimensions.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/core/build.gradle.kts">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/utils/Constants.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/utils/UiEvent.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/utils/UiText.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/res/values/strings.xml">
           <value>
             <set />
           </value>
@@ -133,6 +168,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/di/UserDomainModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/Address.kt">
           <value>
             <set />
@@ -163,7 +203,52 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/use_cases/GetUsers.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/use_cases/UsersUseCases.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/users/users_presentation/build.gradle.kts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/GetUserUiState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/GetUserState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/GetUserUiState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/UserEvent.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/components/ListUserScreen.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/components/UserItem.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/viewmodel/GetUsersViewModel.kt">
           <value>
             <set />
           </value>
