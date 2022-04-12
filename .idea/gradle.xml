@@ -11,6 +11,12 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core-ui" />
+            <option value="$PROJECT_DIR$/users" />
+            <option value="$PROJECT_DIR$/users/users_data" />
+            <option value="$PROJECT_DIR$/users/users_domain" />
+            <option value="$PROJECT_DIR$/users/users_presentation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

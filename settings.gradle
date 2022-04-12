@@ -14,3 +14,11 @@ dependencyResolutionManagement {
 }
 rootProject.name = "CeibaTest"
 include ':app'
+include ':core'
+include ':core-ui'
+
+//Modulo de capa de negocio
+include ':users'
+include ':users:users_domain'
+include ':users:users_data'
+include ':users:users_presentation'
