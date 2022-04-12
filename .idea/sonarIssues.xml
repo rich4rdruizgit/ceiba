@@ -8,6 +8,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/ceiba/ceibatest/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ceiba/ceibatest/CeibApp.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ceiba/ceibatest/CeibaApp.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ceiba/ceibatest/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/base-module.gradle">
           <value>
             <set />
@@ -43,6 +68,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/utils/Constants.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/settings.gradle">
           <value>
             <set />
@@ -53,7 +83,82 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/di/UserDataModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/remote/UserApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/remote/dto/Address.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/remote/dto/AddressDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/remote/dto/CompanyDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/remote/dto/GeoDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/remote/dto/UserDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/remote/dto/UserItemDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/repository/UserRepositoryImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/users/users_domain/build.gradle.kts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/Address.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/AddressDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/Geo.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/User.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/UserItem.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/repository/UserRepository.kt">
           <value>
             <set />
           </value>
