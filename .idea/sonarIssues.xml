@@ -118,12 +118,87 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/post/post_data/src/main/java/com/ceiba/post_data/di/PostDataModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_data/src/main/java/com/ceiba/post_data/mapper/PostMapper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_data/src/main/java/com/ceiba/post_data/remote/PostApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_data/src/main/java/com/ceiba/post_data/remote/dto/ListPostsDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_data/src/main/java/com/ceiba/post_data/remote/dto/PostDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_data/src/main/java/com/ceiba/post_data/repository/PostRepositoryImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/post/post_domain/build.gradle.kts">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/post/post_domain/src/main/java/com/ceiba/post_domain/di/PostDomainModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_domain/src/main/java/com/ceiba/post_domain/model/PostModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_domain/src/main/java/com/ceiba/post_domain/repository/PostRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_domain/src/main/java/com/ceiba/post_domain/use_case/GetPosts.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_domain/src/main/java/com/ceiba/post_domain/use_case/PostUsesCases.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/post/post_presentation/build.gradle.kts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_presentation/src/main/java/com/ceiba/post_presentation/PostViewEvent.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_presentation/src/main/java/com/ceiba/post_presentation/PostViewState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_presentation/src/main/java/com/ceiba/post_presentation/PostViewUiState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_presentation/src/main/java/com/ceiba/post_presentation/viewmodel/PostViewModel.kt">
           <value>
             <set />
           </value>

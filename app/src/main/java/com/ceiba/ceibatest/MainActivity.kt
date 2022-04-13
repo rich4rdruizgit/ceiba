@@ -42,6 +42,11 @@ class MainActivity : ComponentActivity() {
                                 scaffoldState = scaffoldState,
                                 onNavigateUp = { navController.navigateUp() })
                         }
+                        composable(Route.POSTS) {
+                            ListUserScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigateUp = { navController.navigateUp() })
+                        }
                     }
                 }
             }
