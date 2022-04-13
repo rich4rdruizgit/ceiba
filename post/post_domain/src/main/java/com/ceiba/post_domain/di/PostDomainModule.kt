@@ -1,6 +1,7 @@
 package com.ceiba.post_domain.di
 
 import com.ceiba.post_domain.repository.PostRepository
+import com.ceiba.post_domain.use_case.GetPostByUser
 import com.ceiba.post_domain.use_case.GetPosts
 import com.ceiba.post_domain.use_case.PostUsesCases
 import dagger.Module
@@ -18,9 +19,8 @@ object PostDomainModule {
         repository: PostRepository
     ): PostUsesCases {
         return PostUsesCases(
-            getPosts = GetPosts(repository)
+            getPosts = GetPosts(repository),
+            getPostByUser = GetPostByUser(repository)
         )
-
-
     }
 }

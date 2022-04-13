@@ -3,20 +3,20 @@ package com.ceiba.ceibatest
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
+import androidx.compose.material.Text
+import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import coil.annotation.ExperimentalCoilApi
-import com.ceiba.ceibatest.navigation.Route
 import com.ceiba.ceibatest.ui.theme.CeibaTestTheme
+import com.ceiba.core.navigation.Screen
+import com.ceiba.core.utils.Constants
+import com.ceiba.post_presentation.components.PostScreen
 import com.ceiba.users_presentation.list.components.ListUserScreen
-import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalComposeUiApi
@@ -28,27 +28,20 @@ class MainActivity : ComponentActivity() {
         setContent {
             CeibaTestTheme {
                 val navController = rememberNavController()
-                val scaffoldState = rememberScaffoldState()
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    scaffoldState = scaffoldState
+                NavHost(
+                    navController = navController,
+                    startDestination = Screen.ListUserScreen.route
                 ) {
-                    NavHost(
-                        navController = navController,
-                        startDestination = Route.LIST_USERS
+                    composable(route = Screen.ListUserScreen.route) {
+                        ListUserScreen(navController = navController)
+                    }
+                    composable(
+                        route = Screen.PostScreen.route + "/{userId}"
                     ) {
-                        composable(Route.LIST_USERS) {
-                            ListUserScreen(
-                                scaffoldState = scaffoldState,
-                                onNavigateUp = { navController.navigateUp() })
-                        }
-                        composable(Route.POSTS) {
-                            ListUserScreen(
-                                scaffoldState = scaffoldState,
-                                onNavigateUp = { navController.navigateUp() })
-                        }
+                        PostScreen()
                     }
                 }
+
             }
         }
     }

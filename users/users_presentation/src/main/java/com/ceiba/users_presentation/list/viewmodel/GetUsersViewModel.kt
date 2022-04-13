@@ -1,6 +1,7 @@
 package com.ceiba.users_presentation.list.viewmodel
 
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -32,6 +33,10 @@ class GetUsersViewModel @Inject constructor(private val usersUseCases: UsersUseC
             is UserEvent.onGetUsers -> {
                getUsers()
             }
+
+            is UserEvent.OnClickPostByUser -> {
+                getPostByUser(event.id)
+            }
         }
     }
 
@@ -59,6 +64,10 @@ class GetUsersViewModel @Inject constructor(private val usersUseCases: UsersUseC
                     )
                 }
         }
+    }
+
+    private fun getPostByUser(id: Int){
+        Log.d("IDQUELLEGA", id.toString())
     }
 
 }

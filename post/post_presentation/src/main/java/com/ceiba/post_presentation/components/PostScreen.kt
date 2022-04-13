@@ -1,4 +1,4 @@
-package com.ceiba.users_presentation.list.components
+package com.ceiba.post_presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -14,21 +14,18 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavController
+import androidx.lifecycle.SavedStateHandle
 import coil.annotation.ExperimentalCoilApi
 import com.ceiba.core.R
-import com.ceiba.core.navigation.Route
-import com.ceiba.core.navigation.Screen
 import com.ceiba.core_ui.util.LocalSpacing
-import com.ceiba.users_presentation.list.UserEvent
-import com.ceiba.users_presentation.list.viewmodel.GetUsersViewModel
+import com.ceiba.post_presentation.PostViewEvent
+import com.ceiba.post_presentation.viewmodel.PostViewModel
 
-@ExperimentalCoilApi
 @ExperimentalComposeUiApi
+@ExperimentalCoilApi
 @Composable
-fun ListUserScreen(
-        navController: NavController,
-    viewModel: GetUsersViewModel = hiltViewModel()
+fun PostScreen(
+    viewModel: PostViewModel = hiltViewModel()
 ) {
     val spacing = LocalSpacing.current
     val state = viewModel.state
@@ -45,21 +42,10 @@ fun ListUserScreen(
                 .fillMaxSize()
                 .padding(bottom = spacing.spaceMedium)
         ) {
-
-            if (!state.isGetUserService) {
-                viewModel.onEvent(UserEvent.onGetUsers)
-            } else {
-                items(state.getUsers) { userDetail ->
-                    UserItem(
-                        userUiState = userDetail,
-                        onItemClick = { navController.navigate(Screen.PostScreen.route + "/${userDetail.user.id.toString()}") }
-                    )
-
-                }
+            items(state.postsByUser) { postDetail ->
+                PostItem(postDetail = postDetail)
             }
-
         }
-
     }
 
     Box(
@@ -67,8 +53,8 @@ fun ListUserScreen(
         contentAlignment = Alignment.Center
     ) {
         when {
-            !state.isGetUserService -> CircularProgressIndicator()
-            state.getUsers.isEmpty() -> {
+            state.isLoading -> CircularProgressIndicator()
+            state.postsByUser.isEmpty() -> {
                 Text(
                     text = stringResource(id = R.string.no_results),
                     style = MaterialTheme.typography.body1,
@@ -79,5 +65,4 @@ fun ListUserScreen(
         }
 
     }
-
 }

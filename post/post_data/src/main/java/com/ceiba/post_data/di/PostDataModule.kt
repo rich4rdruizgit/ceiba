@@ -21,7 +21,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object PostDataModule {
 
-    @Provides
+    /*@Provides
     @Singleton
     fun provideOKHttpClient(): OkHttpClient {
         return OkHttpClient.Builder().addInterceptor(
@@ -30,7 +30,7 @@ object PostDataModule {
             }
         )
             .build()
-    }
+    }*/
 
     @Provides
     @Singleton

@@ -22,4 +22,18 @@ class PostRepositoryImpl(
         }
     }
 
+    override suspend fun getPostByUser(userId: Int): Result<List<Post>> {
+        return  try {
+            val getPostDto = api.getPostByUser(userId)
+            Result.success(
+                getPostDto.mapNotNull {
+                    it.toPostModel()
+                }
+            )
+        }catch (e: java.lang.Exception){
+            e.printStackTrace()
+            Result.failure(e)
+        }
+    }
+
 }

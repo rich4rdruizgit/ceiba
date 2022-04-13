@@ -18,6 +18,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/ceiba/ceibatest/CeibApp_HiltComponents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/ceiba/ceibatest/MainActivity.java">
           <value>
             <set />
@@ -89,6 +94,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/commons/Resource.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/navigation/Route.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/navigation/Screen.kt">
           <value>
             <set />
           </value>
@@ -168,6 +183,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/post/post_domain/src/main/java/com/ceiba/post_domain/use_case/GetPostByUser.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/post/post_domain/src/main/java/com/ceiba/post_domain/use_case/GetPosts.kt">
           <value>
             <set />
@@ -194,6 +214,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/post/post_presentation/src/main/java/com/ceiba/post_presentation/PostViewUiState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_presentation/src/main/java/com/ceiba/post_presentation/components/PostItem.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/post/post_presentation/src/main/java/com/ceiba/post_presentation/components/PostScreen.kt">
           <value>
             <set />
           </value>

@@ -1,4 +1,4 @@
-package com.ceiba.ceibatest.navigation
+package com.ceiba.core.navigation
 
 object Route {
     const val LIST_USERS = "listUsers"

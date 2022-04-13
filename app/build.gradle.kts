@@ -66,7 +66,9 @@ dependencies {
     implementation(project(Modules.usersDomain))
     implementation(project(Modules.usersData))
     implementation(project(Modules.usersPresentation))
-
+    implementation(project(Modules.postDomain))
+    implementation(project(Modules.postData))
+    implementation(project(Modules.postPresentation))
 
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)
