@@ -60,7 +60,7 @@ fun UserItem(
                     tint = Color(0xFF428646)
                 )
                 Spacer(modifier = Modifier.width(spacing.spaceExtraSmall))
-                Text(text = user.phone)
+                Text(text = user.phone?:"")
             }
             Row {
                 Icon(

@@ -18,5 +18,5 @@ import com.ceiba.core.database.domain.entities.converter.GeoLocationConverter
 @TypeConverters(AddressConverter::class, GeoLocationConverter::class, CompanyConverter::class)
 
 abstract class UserPostDatabase : RoomDatabase() {
-    abstract val dao: UserPostDao
+    abstract fun userPostDao(): UserPostDao
 }

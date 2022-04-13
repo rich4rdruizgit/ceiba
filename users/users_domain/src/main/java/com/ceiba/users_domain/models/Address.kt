@@ -1,9 +1,9 @@
 package com.ceiba.users_domain.models
 
 data class Address(
-    val city: String,
+    val city: String?,
     val geo: Geo,
-    val street: String,
-    val suite: String,
-    val zipcode: String
+    val street: String?,
+    val suite: String?,
+    val zipcode: String?
 )

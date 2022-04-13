@@ -1,5 +1,6 @@
 package com.ceiba.users_data.di
 
+import com.ceiba.core.database.data.local.UserPostDao
 import com.ceiba.core.utils.Constants
 import com.ceiba.users_data.remote.UserApi
 import com.ceiba.users_data.repository.UserRepositoryImpl
@@ -13,6 +14,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -45,10 +47,12 @@ object UserDataModule {
     @Provides
     @Singleton
     fun provideUserRepository(
-        api: UserApi
+        api: UserApi,
+        @Named("userpostdao") dao: UserPostDao
     ): UserRepository {
         return UserRepositoryImpl(
-            api = api
+            api = api,
+            dao = dao
         )
     }
 }

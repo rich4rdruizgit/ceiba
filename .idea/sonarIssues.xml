@@ -148,6 +148,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/database/domain/repository/UserPostRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/core/src/main/java/com/ceiba/core/di/CoreModule.kt">
           <value>
             <set />
@@ -303,7 +308,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/mapper/GeoLocationMapper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/mapper/UserDtoMapper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_data/src/main/java/com/ceiba/users_data/mapper/UserMapper.kt">
           <value>
             <set />
           </value>
@@ -364,6 +379,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/AddressDto.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/models/Company.kt">
           <value>
             <set />
           </value>
