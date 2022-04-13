@@ -2,4 +2,5 @@
 <resources>
     <string name="error_something_went_wrong">Paila</string>
     <string name="no_results">Sin resultados</string>
+    <string name="search">Buscar...s</string>
 </resources>

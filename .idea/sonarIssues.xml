@@ -458,6 +458,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/components/SearchTextField.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/users/users_presentation/src/main/java/com/ceiba/users_presentation/list/components/UserItem.kt">
           <value>
             <set />
