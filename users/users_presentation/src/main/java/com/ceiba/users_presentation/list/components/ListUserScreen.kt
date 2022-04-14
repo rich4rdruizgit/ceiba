@@ -39,34 +39,35 @@ fun ListUserScreen(
     val context = LocalContext.current
 
     val keyboardController = LocalSoftwareKeyboardController.current
-    LaunchedEffect(key1 = keyboardController) {
-        viewModel.uiEvent.collect { event ->
-            when (event) {
-                is UiEvent.ShowSnackbar -> {
-                    scaffoldState.snackbarHostState.showSnackbar(
-                        message = event.message.asString(context)
-                    )
-                    keyboardController?.hide()
+
+    Column {
+        LaunchedEffect(key1 = keyboardController) {
+            viewModel.uiEvent.collect { event ->
+                when (event) {
+                    is UiEvent.ShowSnackbar -> {
+                        scaffoldState.snackbarHostState.showSnackbar(
+                            message = event.message.asString(context)
+                        )
+                        keyboardController?.hide()
+                    }
+                    is UiEvent.NavigateUp -> Unit
+                    else -> Unit
                 }
-                is UiEvent.NavigateUp -> Unit
-                else -> Unit
             }
         }
-    }
-    Column {
         SearchTextField(
             text = state.query,
             onValueChange = {
-                viewModel.onEvent(UserEvent.OnQueryChange(it))
-                viewModel.onEvent(UserEvent.OnSearch)
+                //viewModel.onEvent(UserEvent.OnQueryChange(it))
+                //viewModel.onEvent(UserEvent.OnSearch)
             },
             shouldShowHint = state.isHintVisible,
             onSearch = {
                 keyboardController?.hide()
-                viewModel.onEvent(UserEvent.OnSearch)
+                //viewModel.onEvent(UserEvent.OnSearch)
             },
             onFocusChanged = {
-                viewModel.onEvent(UserEvent.OnSearchFocusChange(it.isFocused))
+                //viewModel.onEvent(UserEvent.OnSearchFocusChange(it.isFocused))
             }
         )
         Spacer(modifier = Modifier.height(spacing.spaceMedium))
@@ -104,7 +105,7 @@ fun ListUserScreen(
             contentAlignment = Alignment.Center
         ) {
             when {
-                !state.isGetUserService -> CircularProgressIndicator()
+                state.isSearching||state.isGetUserService -> CircularProgressIndicator()
                 state.getUsers.isEmpty() -> {
                     Text(
                         text = stringResource(id = R.string.no_results),

@@ -1,7 +1,6 @@
 package com.ceiba.users_presentation.list.viewmodel
 
 
-import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -11,8 +10,8 @@ import com.ceiba.core.R
 import com.ceiba.core.utils.UiEvent
 import com.ceiba.core.utils.UiText
 import com.ceiba.users_domain.use_cases.UsersUseCases
-import com.ceiba.users_presentation.list.UserViewState
 import com.ceiba.users_presentation.list.UserEvent
+import com.ceiba.users_presentation.list.UserViewState
 import com.ceiba.users_presentation.list.UserViewUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
@@ -31,43 +30,65 @@ class GetUsersViewModel @Inject constructor(private val usersUseCases: UsersUseC
     fun onEvent(event: UserEvent) {
         when (event) {
             is UserEvent.onGetUsers -> {
-               getUsers()
+                getUsers()
             }
 
-            is UserEvent.OnClickPostByUser -> {
-                getPostByUser(event.id)
+            is UserEvent.OnSearch -> {
+                searchUserByName()
             }
         }
     }
 
-    private fun getUsers(){
+    private fun getUsers() {
         viewModelScope.launch {
             state = state.copy(
                 isGetUserService = false,
                 getUsers = emptyList()
             )
             usersUseCases.getUsers()
-                .onSuccess {
-                    users ->
-                    state = state.copy(getUsers = users.map{
-                        UserViewUiState(it)
-                    },
-                    isGetUserService = true
+                .onSuccess { users ->
+                    state = state.copy(
+                        getUsers = users.map {
+                            UserViewUiState(it)
+                        },
+                        isGetUserService = true
                     )
                 }
                 .onFailure {
                     state = state.copy(getUsers = emptyList())
                     _uiEvent.send(
-                       UiEvent.ShowSnackbar(
-                           UiText.StringResource(R.string.error_something_went_wrong)
-                       )
+                        UiEvent.ShowSnackbar(
+                            UiText.StringResource(R.string.error_something_went_wrong)
+                        )
                     )
                 }
         }
     }
 
-    private fun getPostByUser(id: Int){
-        Log.d("IDQUELLEGA", id.toString())
+    private fun searchUserByName() {
+        viewModelScope.launch {
+            state = state.copy(
+                isSearching = true,
+                getUsers = emptyList()
+            )
+            usersUseCases.getUsersByName(state.query)
+                .onSuccess { users ->
+                    state = state.copy(
+                        getUsers = users.map {
+                            UserViewUiState(it)
+                        },
+                        isSearching = false
+                    )
+                }
+                .onFailure {
+                    state = state.copy(isSearching = false)
+                    _uiEvent.send(
+                        UiEvent.ShowSnackbar(
+                            UiText.StringResource(R.string.error_something_went_wrong)
+                        )
+                    )
+                }
+        }
     }
 
 }

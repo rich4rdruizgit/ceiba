@@ -5,4 +5,5 @@ import com.ceiba.users_domain.models.UserItem
 
 interface UserRepository {
     suspend fun getUsers(): Result<List<UserItem>>
+    suspend fun getUsersByName(query:String): Result<List<UserItem>>
 }

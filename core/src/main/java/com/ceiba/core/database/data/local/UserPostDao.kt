@@ -16,4 +16,7 @@ interface UserPostDao {
 
     @Query("SELECT * FROM ${Constants.USERS_ROOM_DATABASE_TABLE}")
     fun getAllUsers(): Flow<List<UserEntity>>
+
+    @Query("SELECT * FROM ${Constants.USERS_ROOM_DATABASE_TABLE} WHERE name LIKE :query")
+    fun getUsersByName(query: String): Flow<List<UserEntity>>
 }

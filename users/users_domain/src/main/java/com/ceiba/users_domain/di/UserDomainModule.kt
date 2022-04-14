@@ -2,6 +2,7 @@ package com.ceiba.users_domain.di
 
 import com.ceiba.users_domain.repository.UserRepository
 import com.ceiba.users_domain.use_cases.GetUsers
+import com.ceiba.users_domain.use_cases.GetUsersByName
 import com.ceiba.users_domain.use_cases.UsersUseCases
 import dagger.Module
 import dagger.Provides
@@ -19,7 +20,8 @@ object UserDomainModule {
         repository: UserRepository
     ): UsersUseCases {
         return UsersUseCases(
-            getUsers = GetUsers(repository)
+            getUsers = GetUsers(repository),
+            getUsersByName = GetUsersByName(repository)
         )
     }
 }

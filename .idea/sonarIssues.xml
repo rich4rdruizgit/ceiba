@@ -413,6 +413,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/use_cases/GetUsersByName.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/users/users_domain/src/main/java/com/ceiba/users_domain/use_cases/UsersUseCases.kt">
           <value>
             <set />
